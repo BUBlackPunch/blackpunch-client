@@ -1,11 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { ThemeProvider } from 'emotion-theming';
+
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import theme from '../src/theme';
+import GlobalStyle from './theme/global';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ThemeProvider theme={theme}>
+      <GlobalStyle />
+      <App />
+    </ThemeProvider>
   </React.StrictMode>,
   document.getElementById('root'),
 );
