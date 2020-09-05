@@ -1,6 +1,6 @@
 const BreakPoint = {
   HDPC: 'max-width: 1200px',
-  TABLET: 'max-width: 768px',
+  TABLET: 'max-width: 835px',
   MOBILE: 'max-width: 480px',
 };
 
@@ -10,6 +10,9 @@ const theme = {
   BUTTON_DEFAULT_FONT: '#435A6F',
   LIGHT_BLUE: '#DBEAF7',
   FIX_INNER: '#66788A',
+  WHITE: '#FAFAFA',
+  PRIMARY_FONT: '#3486D2',
+  BORDER_BOTTOM: '',
 
   BP: BreakPoint,
 };
