@@ -13,6 +13,7 @@ module.exports = {
   rules: {
     'prettier/prettier': 0,
     'require-jsdoc': 0,
+    'valid-jsdoc': 0,
   },
   settings: {
     'import/resolver': {
