@@ -1,8 +1,7 @@
 import React from 'react';
 import faker from 'faker';
 
-import Notification from './Notification';
-import { NotiRowProps } from './index';
+import Notification, { NotiRowProps } from './Notification';
 
 const fakeData: Array<NotiRowProps> = [];
 for (let n = 0; n < 100; n++) {

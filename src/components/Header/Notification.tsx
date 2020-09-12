@@ -1,10 +1,21 @@
 /** @jsx jsx */
 import React from 'react';
 import { NotificationsIcon, NotificationsUpdatedIcon, Button, Popover, Table } from 'evergreen-ui';
-import { NotiProps } from './index';
 import { jsx, css } from '@emotion/core';
 
-const NotificationTable: React.SFC<NotiProps> = ({ data }: NotiProps) => {
+export interface NotiRowProps {
+  key: number;
+  isRead: boolean;
+  text: string;
+  date: string;
+  link: string;
+}
+
+export interface NotiProps {
+  data: Array<NotiRowProps>;
+}
+
+const NotificationTable: React.FC<NotiProps> = ({ data }: NotiProps) => {
   const count = data.filter((_d) => _d.isRead === true).length;
   return (
     <div
@@ -38,8 +49,7 @@ const NotificationTable: React.SFC<NotiProps> = ({ data }: NotiProps) => {
   );
 };
 
-function Notification(prop: NotiProps) {
-  const { data } = prop;
+function Notification({ data }: NotiProps): JSX.Element {
   const count = data.filter((_d) => _d.isRead === true).length;
   return (
     <Popover content={<NotificationTable data={data} />}>
@@ -61,5 +71,3 @@ Notification.defaultProps = {
   ],
 };
 export default Notification;
-
-class Noti extends React.PureComponent {}
