@@ -31,13 +31,20 @@ const NotificationTable: React.FC<NotiProps> = ({ data }: NotiProps) => {
         & > p {
           font-size: 13px;
           text-align: center;
+          color: black;
         }
       `}
     >
       <p> 총 {count}개의 새로운 알림이 있습니다.</p>
       <Table.Body height={250} marginTop="10px">
         {data.map((_d) => (
-          <Table.Row intent={_d.isRead ? 'none' : 'success'} key={_d.key} isSelectable onSelect={() => alert(_d.link)}>
+          <Table.Row
+            color="black"
+            intent={_d.isRead ? 'none' : 'success'}
+            key={_d.key}
+            isSelectable
+            onSelect={() => alert(_d.link)}
+          >
             <Table.Cell flexBasis={150} fontSize="12px">
               {_d.text}
             </Table.Cell>
