@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
 import { SearchInput, Button, SearchIcon } from 'evergreen-ui';
 import styled from '../../lib/styled';
-import { Interface } from 'readline';
 
 interface WrapperProps {
   isClick: boolean;
 }
 
 const SearchWrapper = styled.div<WrapperProps>`
+  & {
+    margin-left: 3em;
+  }
   button {
     display: ${({ isClick }) => (isClick ? 'none' : null)};
   }

@@ -1,41 +1,52 @@
 import React from 'react';
 import Logo from './Logo';
-import { Pane } from 'evergreen-ui';
 import Search from './Search';
 import Profile from './Profile';
 import Notification from './Notification';
+import { SigninButton } from './SigninButton';
+import styled from '../../lib/styled';
 
 /* /
   ### 예정 사항
-  - [ ] Header: 반응형 고려하여 Pane -> styled.div 변경 예정
-  - [ ] Logo -> LogoWrapper -> onClick (mainpage) 구현 예정.
   - 검색 화면
-    - [ ] 모바일 레이아웃을 다시 정할 필요가 있음.
-    - [ ]  검색 중일 때와 버튼만 보일 때 toggle 구현
-  - [ ] isLogin: 로그인 상태 공유
+    - [ ] 검색 중일 때와 버튼만 보일 때 toggle 구현
+    - [ ] 애니메이션 구현
+    - [ ] Autocomplete, hash tag 표시. 고민.
 / */
 
-function Header(): JSX.Element {
-  // MARK -- sample data
-  return (
-    <Pane
-      width="100%"
-      height="2.5rem"
-      display="flex"
-      color="white"
-      alignItems="center"
-      justifyContent="start"
-      backgroundColor="#084B8A"
-      marginLeft="1px"
-      marginRight="1px"
-      boxShadow="0px 5px 5px rgba(0, 0, 0, 0.25)"
-    >
-      <Logo />
+type Props = {
+  isLogin: boolean;
+};
 
+const HeaderWrapper = styled.div`
+  width: 100%;
+  height: 2.5rem;
+  display: flex;
+  color: white;
+  align-items: center;
+  justify-content: start;
+  background-color: ${({ theme }) => theme.PRIMARY};
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25);
+
+  div:last-child {
+    margin-left: auto;
+  }
+`;
+
+function Header({ isLogin }: Props): JSX.Element {
+  return (
+    <HeaderWrapper>
+      <Logo />
       <Search />
-      <Notification data={undefined} />
-      <Profile />
-    </Pane>
+
+      {isLogin ? (
+        <SigninButton />
+      ) : (
+        <div>
+          <Notification data={undefined} /> <Profile />{' '}
+        </div>
+      )}
+    </HeaderWrapper>
   );
 }
 

@@ -18,6 +18,6 @@ export default {
   component: Notification,
 };
 
-export const HOLA = () => {
+export const HOLA = ():JSX.Element => {
   return <Notification data={fakeData} />;
 };

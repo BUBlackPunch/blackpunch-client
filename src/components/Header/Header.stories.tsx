@@ -8,4 +8,5 @@ export default {
   component: Header,
 };
 
-export const Default = () => <Header />;
+export const Default = (): JSX.Element => <Header isLogin={true} />;
+export const SignIn = (): JSX.Element => <Header isLogin={false} />;
