@@ -40,11 +40,11 @@ function Header({ isLogin }: Props): JSX.Element {
       <Search />
 
       {isLogin ? (
-        <SigninButton />
-      ) : (
         <div>
-          <Notification data={undefined} /> <Profile />{' '}
+          <Notification data={undefined} /> <Profile />
         </div>
+      ) : (
+        <SigninButton />
       )}
     </HeaderWrapper>
   );
