@@ -14,6 +14,7 @@ import Portal from '../../lib/Portal';
 type WrapperProps = {
   visible?: boolean;
   type?: ModalType;
+  width?: string;
 };
 
 type Props = {
@@ -24,6 +25,7 @@ type Props = {
   children: React.ReactNode;
   onClose(e: React.MouseEvent): void;
   type: ModalType;
+  width?: string;
 };
 
 const ModalWrapper = styled.div<WrapperProps>`
@@ -49,7 +51,9 @@ const ModalOverlay = styled.div<WrapperProps>`
   right: 0;
   z-index: 999;
   backdrop-filter: blur(3px);
-  --webkit-backdrop-filter: blur(3px);
+  @supports not (backdrop-filter: blur(3px)) {
+    background-color: rgba(255, 255, 255, 0.75);
+  }
 `;
 
 const ModalInner = styled.div<WrapperProps>`
@@ -58,25 +62,24 @@ const ModalInner = styled.div<WrapperProps>`
   box-shadow: 0 16px 24px rgba(67, 90, 111, 0.301);
   background-color: #fff;
   border-radius: 3px;
-  min-width: 30%;
-  width: 40%;
-  max-width: 80%;
+  min-width: 360px;
+  max-width: ${({ width }) => (width ? width : '380px')};
   top: 50%;
   transform: translateY(-50%);
   margin: 0 auto;
-  justify-content: center;
   background-color: ${({ type, theme }) => (type === MODAL_TYPE_DEAFULT ? theme.WHITE : theme.LIGHT_BLUE)};
   padding: 30px 10px;
 `;
 
-const Modal = ({ visible, children, onClose, closable, type }: Props): JSX.Element => {
+const Modal = ({ width, visible, children, onClose, closable, type }: Props): JSX.Element => {
   const onMaskClick = (e: React.MouseEvent) => {
     if (e.target === e.currentTarget) {
       onClose(e);
     }
   };
   return (
-    <Portal elementId="modal-root">
+    // <Portal elementId="modal-root">
+    <>
       <ModalOverlay visible={visible} />
       <ModalWrapper
         // className={className}
@@ -86,12 +89,13 @@ const Modal = ({ visible, children, onClose, closable, type }: Props): JSX.Eleme
         tabIndex={-1}
         visible={visible}
       >
-        <ModalInner tabIndex={0} className="modal-inner" type={type}>
+        <ModalInner width={width} className="modal-inner" type={type}>
           {/* {closable && <CloseButton className="modal-close" onClick={close} />} */}
           {children}
         </ModalInner>
       </ModalWrapper>
-    </Portal>
+    </>
+    // </Portal>
   );
 };
 
