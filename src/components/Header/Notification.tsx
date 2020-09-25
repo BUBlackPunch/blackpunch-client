@@ -12,7 +12,7 @@ export interface NotiRowProps {
 }
 
 export interface NotiProps {
-  data: Array<NotiRowProps>;
+  data: NotiRowProps[];
 }
 
 const NotificationTable: React.FC<NotiProps> = ({ data }: NotiProps) => {

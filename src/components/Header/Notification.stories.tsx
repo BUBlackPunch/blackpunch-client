@@ -3,7 +3,7 @@ import faker from 'faker';
 
 import Notification, { NotiRowProps } from './Notification';
 
-const fakeData: Array<NotiRowProps> = [];
+const fakeData: NotiRowProps[] = [];
 for (let n = 0; n < 100; n++) {
   fakeData.push({
     key: n,

@@ -9,7 +9,7 @@ type Post = {
   date: string;
 };
 
-const WrittenPosts: Array<Post> = [
+const WrittenPosts: Post[] = [
   {
     title: '살아있다살아있다살아있 다살아있  다 살    아있다살  아있 fsa다살아있다',
     categoryColor: '#084B8A',

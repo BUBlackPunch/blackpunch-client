@@ -6,7 +6,7 @@ import { jsx, css } from '@emotion/core';
 import theme from '../../theme';
 
 type Props = {
-  posts: Array<Post>;
+  posts: Post[];
   isPost?: boolean;
 };
 
@@ -19,8 +19,8 @@ type Post = {
 type ModalProps = {
   closable?: boolean;
   name: string;
-  WrittenPosts: Array<Post>;
-  WrittenComments: Array<Post>;
+  WrittenPosts: Post[];
+  WrittenComments: Post[];
   introduce: string;
   visible: boolean;
   setVisible(arg0: boolean): void;
@@ -29,8 +29,8 @@ type ModalProps = {
 type contentProps = {
   closable?: boolean;
   name: string;
-  WrittenPosts: Array<Post>;
-  WrittenComments: Array<Post>;
+  WrittenPosts: Post[];
+  WrittenComments: Post[];
   introduce: string;
 };
 
@@ -53,7 +53,7 @@ const WrittenPostComponent = ({ posts, isPost }: Props) => {
         }
         & > div {
           display: flex;
-          justify-content: flex-start;
+          justify-content: space-around;
           align-items: center;
           margin-right: 0;
           flex-wrap: nowrap;
