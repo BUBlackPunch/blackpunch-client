@@ -28,7 +28,7 @@ const WrittenPosts: Post[] = [
   { title: '살아있다살아있다살아있다살     아있다살아있다살아있다', categoryColor: '#084B8A', date: '10분전' },
 ];
 
-export const Default = () => {
+export const Default = (): JSX.Element => {
   const [visible, setVisible] = useState(true);
   return (
     <ProfileModal
@@ -37,7 +37,8 @@ export const Default = () => {
       introduce="반갑습니다 james입니다."
       WrittenComments={WrittenPosts}
       WrittenPosts={WrittenPosts}
-      name="Kimchi Man"
+      nick="Kimchi Man"
+      id="supa"
       closable={false}
     />
   );
