@@ -1,7 +1,7 @@
 import styled from '../../lib/styled';
 
 const ListHeaderWrapper = styled.div`
-  width: 900px;
+  width: 876px;
   background-color: ${({ theme }) => theme.WHITE};
   display: flex;
   padding: 8px 12px;
@@ -18,6 +18,7 @@ const ListHeaderWrapper = styled.div`
       width: 28%;
     }
     &:nth-child(3) {
+      text-align: center;
       width: 6%;
     }
     &:nth-child(4),
