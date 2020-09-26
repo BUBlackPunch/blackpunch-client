@@ -12,7 +12,7 @@ const theme = {
   FIX_INNER: '#66788A',
   WHITE: '#FAFAFA',
   PRIMARY_FONT: '#3486D2',
-  BORDER_BOTTOM: '',
+  BORDER_BOTTOM: '#EEEEEE',
 
   BP: BreakPoint,
 };
