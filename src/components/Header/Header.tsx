@@ -1,5 +1,6 @@
 import React from 'react';
 import Logo from './Logo';
+// import Search from './Search';
 import Search from './Search';
 import Profile from './Profile';
 import Notification from './Notification';
@@ -19,7 +20,12 @@ type Props = {
 };
 
 const HeaderWrapper = styled.div`
+  &,
+  div {
+    display: flex;
+  }
   width: 100%;
+  min-width: 588px;
   height: 2.5rem;
   display: flex;
   color: white;

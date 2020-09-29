@@ -1,63 +1,33 @@
-import React, { useState } from 'react';
-import { SearchInput, Button, SearchIcon } from 'evergreen-ui';
-import styled from '../../lib/styled';
+import React, { useState, useRef } from 'react';
+import { SearchIcon } from 'evergreen-ui';
+import { SearchWrapper } from './styled';
 
-interface WrapperProps {
-  isClick: boolean;
-}
-
-const SearchWrapper = styled.div<WrapperProps>`
-  & {
-    margin-left: 3em;
-  }
-  button {
-    display: ${({ isClick }) => (isClick ? 'none' : null)};
-  }
-  & > div {
-    display: ${({ isClick }) => (isClick ? null : 'none')};
-  }
-`;
-
-interface Props {
-  onClick: () => void;
-}
-
-function SearchButton({ onClick }: Props) {
-  return (
-    <Button appearance="minimal" intent="none" onClick={onClick}>
-      <SearchIcon color="white" size={16} />
-    </Button>
-  );
-}
-
-/* / 
-  MARK 
-  SearchBar 일때, 외부 클릭시 Icon으로 변경되게 구현 예정. 
-/ */
-function SearchBar() {
+const Search: React.FC = () => {
   const [value, setValue] = useState('');
-  const onChange = (e: any) => {
-    const { value } = e.target;
-    setValue(value);
+  const inputEl = useRef() as React.MutableRefObject<HTMLInputElement>;
+
+  const onBlurHandler = () => {
+    if (value === '') {
+      inputEl.current.className = '';
+    }
+  };
+  const onClickHandler = () => {
+    inputEl.current.className = 'search-enable';
+    inputEl.current.focus();
   };
 
-  // MARK -- submit구현 예정.
-  const onSubmit = (e: any) => {
-    const { vaule } = e.target;
-  };
-  return <SearchInput placeholder="검색할 내용을 입력하세요." width="auto" onChange={onChange} value={value} />;
-}
-
-function Search() {
-  const [isClick, setBool] = useState<boolean>(false);
   return (
-    <SearchWrapper isClick={isClick}>
-      <SearchButton onClick={() => setBool(true)} />
-      <div>
-        <SearchBar />
-      </div>
+    <SearchWrapper>
+      <SearchIcon size={18} onClick={onClickHandler} />
+      <input
+        value={value}
+        onChange={({ target: { value } }) => setValue(value)}
+        onBlur={onBlurHandler}
+        type="text"
+        ref={inputEl}
+      />
     </SearchWrapper>
   );
-}
+};
 
 export default Search;
