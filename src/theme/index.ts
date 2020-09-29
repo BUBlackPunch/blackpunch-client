@@ -13,6 +13,7 @@ const theme = {
   WHITE: '#FAFAFA',
   PRIMARY_FONT: '#3486D2',
   BORDER_BOTTOM: '',
+  ERROR: '#EC4C47',
 
   BP: BreakPoint,
 };
