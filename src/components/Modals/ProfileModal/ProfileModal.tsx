@@ -1,7 +1,7 @@
 /** @jsx jsx */
 // import React from 'react';
 import { Avatar } from 'evergreen-ui';
-import Modal, { MODAL_TYPE_PROFILE } from '../Modal';
+import ModalFrame, { MODAL_TYPE_PROFILE } from '../ModalFrame';
 import { jsx, css } from '@emotion/core';
 import { PostListWrapper, ProfileWrapper } from './styled';
 
@@ -86,7 +86,7 @@ const ProfileModal = ({
   introduce,
 }: ModalProps): JSX.Element => {
   return (
-    <Modal
+    <ModalFrame
       visible={visible}
       closable={closable === undefined ? true : closable}
       onClose={() => setVisible(false)}
@@ -100,7 +100,7 @@ const ProfileModal = ({
         id={id}
         nick={nick}
       />
-    </Modal>
+    </ModalFrame>
   );
 };
 

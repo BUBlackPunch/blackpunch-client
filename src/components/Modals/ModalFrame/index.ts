@@ -1,4 +1,4 @@
-export {default} from './Modal';
+export {default} from './ModalFrame';
 
 export const MODAL_TYPE_DEAFULT = 'MODAL_TYPE_DEAFULT';
 export const MODAL_TYPE_PROFILE = 'MODAL_TYPE_PROFILE';
