@@ -1,9 +1,3 @@
-const BreakPoint = {
-  HDPC: 'max-width: 1200px',
-  TABLET: 'max-width: 835px',
-  MOBILE: 'max-width: 480px',
-};
-
 const theme = {
   PRIMARY: '#084B8A',
   BUTTON_PRIMARY: '#ABCCEC',
@@ -13,8 +7,6 @@ const theme = {
   WHITE: '#FAFAFA',
   PRIMARY_FONT: '#3486D2',
   BORDER_BOTTOM: '#EEEEEE',
-
-  BP: BreakPoint,
 };
 
 export default theme;

@@ -27,31 +27,6 @@ const ListHeaderWrapper = styled.div`
       text-align: center;
     }
   }
-
-  @media (${({ theme }) => theme.BP.TABLET}) {
-    width: calc(100% - 24px);
-  }
-
-  @media (${({ theme }) => theme.BP.MOBILE}) {
-    & > div {
-      font-size: 12px;
-
-      &:nth-child(1) {
-        width: 80%;
-      }
-      &:nth-child(2) {
-        display: none;
-      }
-      &:nth-child(3),
-      &:last-child {
-        display: none;
-      }
-      &:nth-child(4) {
-        width: 20%;
-        text-align: center;
-      }
-    }
-  }
 `;
 
 export default ListHeaderWrapper;

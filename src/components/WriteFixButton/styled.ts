@@ -23,18 +23,6 @@ const WriteFixButtonWrapper = styled.button`
     width: 24px;
     height: 24px;
   }
-
-  @media (${({ theme }) => theme.BP.MOBILE}) {
-    right: 16px;
-    bottom: 16px;
-    width: 40px;
-    height: 40px;
-
-    & svg {
-      width: 18px;
-      height: 18px;
-    }
-  }
 `;
 
 export default WriteFixButtonWrapper;
