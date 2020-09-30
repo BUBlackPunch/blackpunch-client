@@ -6,6 +6,7 @@ const theme = {
   FIX_INNER: '#66788A',
   WHITE: '#FAFAFA',
   PRIMARY_FONT: '#3486D2',
+  ERROR: '#EC4C47',
   BORDER_BOTTOM: '#EEEEEE',
 };
 
