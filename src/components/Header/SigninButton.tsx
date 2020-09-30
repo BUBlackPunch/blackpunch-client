@@ -20,6 +20,8 @@ const ButtonWrapper: React.FC<ButtonProps> = ({ children }: ButtonProps) => {
         margin-right: 0.5rem;
         background: none;
         font-size: 14px;
+        border: none;
+        outline: none;
         /* font-weight: 500; */
 
         &:hover {

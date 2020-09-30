@@ -1,4 +1,4 @@
-import styled from '../../lib/styled';
+import styled from '../../../lib/styled';
 export const PostListWrapper = styled.div`
   &,
   * {
