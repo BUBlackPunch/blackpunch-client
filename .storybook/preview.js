@@ -10,6 +10,11 @@ const GlobalStyle = () => (
     styles={css`
       ${reset}
 
+      body.sb-show-main {
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+
       @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
 
       body.sb-show-main * {
@@ -27,3 +32,23 @@ export const decorators = [
     </ThemeProvider>
   ),
 ];
+
+export const parameters = {
+  backgrounds: {
+    default: 'white',
+    values: [
+      {
+        name: 'white',
+        value: '#ffffff',
+      },
+      {
+        name: 'dark',
+        value: '#333333',
+      },
+      {
+        name: 'app-background',
+        value: '#ECF4FB',
+      },
+    ],
+  },
+};
