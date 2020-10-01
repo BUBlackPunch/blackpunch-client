@@ -8,7 +8,6 @@ export const ContentWrapper = styled.div`
   font-size: 0.7rem;
   flex-direction: column;
   padding: 1rem 3.5rem 0 2rem;
-
   h1 {
     font-weight: bold;
     font-size: 1.8rem;
@@ -22,7 +21,7 @@ export const ContentWrapper = styled.div`
 
   & > form {
     display: grid;
-    grid-template-columns: 2fr 5fr;
+    grid-template-columns: 30% 70%;
     grid-row-gap: 1rem;
 
     /* input with valid check  */
@@ -35,7 +34,7 @@ export const ContentWrapper = styled.div`
       span {
         margin-top: 0.2rem;
         font-weight: bold;
-        font-size: 0.3rem;
+        font-size: 0.5rem;
         padding-left: 0.2rem;
       }
     }

@@ -62,7 +62,7 @@ const ModalInner = styled.div<WrapperProps>`
   box-shadow: 0 16px 24px rgba(67, 90, 111, 0.301);
   background-color: #fff;
   border-radius: 3px;
-  min-width: 360px;
+  min-width: ${({ width }) => (width ? width : '380px')};
   max-width: ${({ width }) => (width ? width : '380px')};
   top: 50%;
   transform: translateY(-50%);
