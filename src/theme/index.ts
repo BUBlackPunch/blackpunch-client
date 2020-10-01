@@ -8,6 +8,7 @@ const theme = {
   PRIMARY_FONT: '#3486D2',
   ERROR: '#EC4C47',
   BORDER_BOTTOM: '#EEEEEE',
+  DISABLED_BLUE: 'rgba(87, 154, 218, 0.5)',
 };
 
 export default theme;
