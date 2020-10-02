@@ -2,7 +2,6 @@ import React from 'react';
 import styled from '../../../lib/styled';
 import { ModalType, MODAL_TYPE_DEAFULT } from './index';
 import Portal from '../../../lib/Portal';
-// import { createPortal } from 'react-dom';
 
 /* 
   property:
@@ -24,7 +23,7 @@ type Props = {
   visible: boolean;
   children: React.ReactNode;
   onClose(e: React.MouseEvent): void;
-  type: ModalType;
+  type?: ModalType;
   width?: string;
 };
 
@@ -71,7 +70,7 @@ const ModalInner = styled.div<WrapperProps>`
   padding: 30px 10px;
 `;
 
-const ModalFrame = ({ width, visible, children, onClose, closable, type }: Props): JSX.Element => {
+const ModalFrame = ({ width, visible, children, onClose, closable, type = MODAL_TYPE_DEAFULT }: Props): JSX.Element => {
   const onMaskClick = (e: React.MouseEvent) => {
     if (e.target === e.currentTarget) {
       onClose(e);
