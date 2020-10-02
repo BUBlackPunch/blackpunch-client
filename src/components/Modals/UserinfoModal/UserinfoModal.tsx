@@ -27,7 +27,7 @@ function Content({ isEditing, setEditing }: ContentProps): ReactElement {
         <span>패스워드</span>
         <div>
           <Input type="password" disabled={!isEditing} />
-          <ValidCheck type="VALID_CHECK_DEFAULT">{'test'}</ValidCheck>
+          {isEditing ? <ValidCheck type="VALID_CHECK_DEFAULT">{'test'}</ValidCheck> : null}
         </div>
         <span>
           패스워드
@@ -36,7 +36,7 @@ function Content({ isEditing, setEditing }: ContentProps): ReactElement {
         </span>
         <div>
           <Input type="password" disabled={!isEditing} />
-          <ValidCheck type="VALID_CHECK_ERROR">{'test'}</ValidCheck>
+          {isEditing ? <ValidCheck type="VALID_CHECK_ERROR">{'test'}</ValidCheck> : null}
         </div>
         <span>대학 웹메일</span>
         <span>
@@ -46,7 +46,7 @@ function Content({ isEditing, setEditing }: ContentProps): ReactElement {
         <span>닉네임</span>
         <div>
           <Input disabled={!isEditing} />
-          <ValidCheck type="VALID_CHECK_DEFAULT">{'sample'}</ValidCheck>
+          {isEditing ? <ValidCheck type="VALID_CHECK_DEFAULT">{'sample'}</ValidCheck> : null}
         </div>
         <span>자기소개</span>
         <Textarea disabled={!isEditing} />
