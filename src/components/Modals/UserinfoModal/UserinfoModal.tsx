@@ -15,41 +15,43 @@ interface ContentProps {
   setEditing: (arg0: boolean) => void;
 }
 
-function Content({ isEditing, setEditing }: ContentProps): ReactElement {
+const Content = ({ isEditing, setEditing }: ContentProps): ReactElement => {
   return (
     <ContentWrapper>
       <h1>개인정보</h1>
       <form>
         <span>아이디</span>
-        <div>
-          <Input disabled />
-        </div>
-        <span>패스워드</span>
-        <div>
-          <Input type="password" disabled={!isEditing} />
-          {isEditing ? <ValidCheck type="VALID_CHECK_DEFAULT">{'test'}</ValidCheck> : null}
-        </div>
-        <span>
-          패스워드
-          <br />
-          중복확인
-        </span>
-        <div>
-          <Input type="password" disabled={!isEditing} />
-          {isEditing ? <ValidCheck type="VALID_CHECK_ERROR">{'test'}</ValidCheck> : null}
-        </div>
+        <div>{isEditing ? <Input disabled value="id" /> : 'id'}</div>
+        {isEditing ? (
+          <>
+            <span>패스워드</span>
+            <div>
+              <Input type="password" />
+              {isEditing ? <ValidCheck type="VALID_CHECK_DEFAULT">{'test'}</ValidCheck> : null}
+            </div>
+            <span>
+              패스워드
+              <br />
+              중복확인
+            </span>
+            <div>
+              <Input type="password" />
+              {isEditing ? <ValidCheck type="VALID_CHECK_ERROR">{'test'}</ValidCheck> : null}
+            </div>
+          </>
+        ) : null}
         <span>대학 웹메일</span>
         <span>
-          <Input disabled />
-          <span>@bu.ac.kr</span>
+          {isEditing ? <Input disabled value="id" /> : 'id'}
+          <span> @bu.ac.kr</span>
         </span>
         <span>닉네임</span>
         <div>
-          <Input disabled={!isEditing} />
+          {isEditing ? <Input value="nick" /> : 'nick'}
           {isEditing ? <ValidCheck type="VALID_CHECK_DEFAULT">{'sample'}</ValidCheck> : null}
         </div>
         <span>자기소개</span>
-        <Textarea disabled={!isEditing} />
+        {isEditing ? <Textarea value="nick" /> : '자기소개'}
       </form>
       <div>
         <Button
@@ -60,13 +62,15 @@ function Content({ isEditing, setEditing }: ContentProps): ReactElement {
       </div>
     </ContentWrapper>
   );
-}
+};
 
-export default function UserinfoModal({ visible, setVisible, closable }: Props): ReactElement {
+const UserinfoModal: React.FC<Props> = ({ visible, setVisible, closable }: Props) => {
   const [editing, setEditing] = useState(false);
   return (
     <ModalFrame width="486px" visible={visible} onClose={() => setVisible(false)} closable={closable}>
       <Content isEditing={editing} setEditing={setEditing} />
     </ModalFrame>
   );
-}
+};
+
+export default UserinfoModal;
