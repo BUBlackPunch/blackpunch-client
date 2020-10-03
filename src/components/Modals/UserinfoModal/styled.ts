@@ -43,7 +43,7 @@ export const ContentWrapper = styled.div`
       display: inline-flex;
       input {
         width: 7rem;
-      }
+      }    
       size: 0.6rem;
       font-weight: 500;
 
@@ -53,6 +53,7 @@ export const ContentWrapper = styled.div`
       }
 
       span {
+        margin-left: 0.1rem;
         font-weight: normal;
         align-self: center;
       }

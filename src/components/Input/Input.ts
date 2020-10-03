@@ -14,6 +14,7 @@ export const Input = styled.input`
 
   &:disabled {
     background-color: ${({ theme }) => theme.DISABLED_BLUE};
+    cursor: not-allowed;
   }
 
   &:invalid {

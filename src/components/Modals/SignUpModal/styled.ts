@@ -55,6 +55,7 @@ export const ContentWrapper = styled.div`
       span {
         font-weight: normal;
         align-self: center;
+        margin-left: 0.1rem;
       }
     }
   }
