@@ -8,6 +8,5 @@ export default {
 
 export function Default(): ReactElement {
   const [visible, setVisible] = useState(true);
-  const [editing, setEditing] = useState(false);
   return <UserinfoModal visible={visible} setVisible={setVisible} closable={false} />;
 }
