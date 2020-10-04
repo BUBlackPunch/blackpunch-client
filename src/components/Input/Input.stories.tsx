@@ -13,3 +13,27 @@ export const Default = (): JSX.Element => {
     </>
   );
 };
+
+export const Invalid = (): JSX.Element => {
+  return (
+    <>
+      <h5>Input</h5>
+      <Input required />
+      <br />
+      <h5>Textarea</h5>
+      <Textarea required />
+    </>
+  );
+};
+
+export const Disabled = (): JSX.Element => {
+  return (
+    <>
+      <h5>Input</h5>
+      <Input disabled />
+      <br />
+      <h5>Textarea</h5>
+      <Textarea disabled />
+    </>
+  );
+};

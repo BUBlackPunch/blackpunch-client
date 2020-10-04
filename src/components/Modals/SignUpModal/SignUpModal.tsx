@@ -67,7 +67,7 @@ const Content = () => {
         </span>
         <span>닉네임</span>
         <div>
-          <Input type="password" />
+          <Input />
           <ValidCheck type="VALID_CHECK_DEFAULT">{'sample'}</ValidCheck>
         </div>
         <span>자기소개</span>
