@@ -23,6 +23,18 @@ export const PostTitleWrapper = styled.div`
   font-size: 14px;
   line-height: 16px;
 
+  & > div {
+    display: flex;
+
+    & > span {
+      display: block;
+      max-width: 340px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+  }
+
   & img {
     margin-left: 8px;
   }

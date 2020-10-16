@@ -37,7 +37,7 @@ const PostCard = ({ post }: Props) => (
   <PostCardWrapper borderColor={post.category.color}>
     <PostTitleWrapper>
       <div>
-        {post.title}
+        <span>{post.title}</span>
         {post.hasImage && <img src={image} alt="post has img"></img>}
       </div>
       <span>{post.category.name}</span>
