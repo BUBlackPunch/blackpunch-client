@@ -10,6 +10,7 @@ const WriteFixButtonWrapper = styled.button`
   border: none;
   border-radius: 30px;
   cursor: pointer;
+  z-index: 100;
 
   &:focus {
     outline: none;
