@@ -12,17 +12,21 @@ export interface ItemProps {
   id?: number;
   // writer: string;
   name: string;
+  date: string;
   like: number;
   content: string;
   // content: string;
 }
 
-export const AnswerView: React.FC<ItemProps> = ({ name, like, content }: ItemProps) => {
+export const AnswerView: React.FC<ItemProps> = ({ name, date, like, content }: ItemProps) => {
   return (
     <AnswerViewWrapper>
       <span>
-        <Avatar size={30} />
-        <div>{name}</div>
+        <Avatar size={35} />
+        <div>
+          <span>{name}</span>
+          <span>{date}</span>
+        </div>
         <div>
           <HeartIcon />
           <div>{like}</div>
@@ -44,7 +48,13 @@ const AnswerList = ({ items }: ListProps): JSX.Element => {
     <AnswerListWrapper>
       <span>답글 {items.length}</span>
       {items.map((item) => (
-        <AnswerView key={item.id ?? undefined} name={item.name} like={item.like} content={item.content} />
+        <AnswerView
+          key={item.id ?? undefined}
+          date={item.date}
+          name={item.name}
+          like={item.like}
+          content={item.content}
+        />
       ))}
     </AnswerListWrapper>
   );

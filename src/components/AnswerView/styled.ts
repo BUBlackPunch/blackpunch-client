@@ -9,7 +9,9 @@ export const AnswerViewWrapper = styled.div`
   width: 900px;
   flex-direction: column;
   color: ${({ theme }) => theme.PRIMARY_FONT};
-  /* background-color: #fff; */
+  background-color: #fff;
+  border: solid 0.5px #dddddd;
+  padding: 0.75rem 1rem 0.75rem 1rem;
 
   & > span:first-child {
     justify-content: flex-start;
@@ -20,11 +22,15 @@ export const AnswerViewWrapper = styled.div`
     & > div:first-child {
       margin-right: 0.5rem;
     }
-
+    & > div:nth-child(2) {
+      display: flex;
+      line-height: 1rem;
+      flex-direction: column;
+    }
     & > div:last-child {
       justify-self: flex-end;
       margin-left: auto;
-      flex-direction: column;
+      /* flex-direction: column; */
       align-items: center;
     }
   }
@@ -51,7 +57,7 @@ export const AnswerViewWrapper = styled.div`
 export const AnswerListWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 0.75rem 1rem 0.75rem 1rem;
+  /* padding: 0.75rem 1rem 0.75rem 1rem; */
   width: 900px;
   & > span {
     font-size: 0.8rem;

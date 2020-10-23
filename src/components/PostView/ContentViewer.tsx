@@ -1,13 +1,12 @@
 import React from 'react';
-import { Viewer } from '@toast-ui/react-editor'
+import { Viewer } from '@toast-ui/react-editor';
 
 interface Props {
   content: string;
 }
 
 const ContentViewer: React.FC<Props> = ({ content }: Props) => {
-  return <Viewer initialValue={content}/>
-}
+  return <Viewer initialValue={content} />;
+};
 
-
-export default ContentViewer
+export default ContentViewer;

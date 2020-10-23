@@ -39,30 +39,35 @@ const AnswerData: ItemProps[] = [
     id: 1,
     name: 'name',
     like: 10,
+    date: '2020.08.08',
     content: content,
   },
   {
     id: 2,
     name: 'name',
     like: 10,
+    date: '2020.08.08',
     content: content,
   },
   {
     id: 4,
     name: 'name',
     like: 10,
+    date: '2020.08.08',
     content: content,
   },
   {
     id: 5,
     name: 'name',
     like: 10,
+    date: '2020.08.08',
     content: content,
   },
   {
     id: 6,
     name: 'name',
     like: 10,
+    date: '2020.08.08',
     content: content,
   },
 ];
@@ -71,7 +76,7 @@ storiesOf('Post & Answer', module)
   .add('PostHeader', () => <PostHeader post={post} />)
   .add('TUIView', () => <TUIViewer content={content} />)
   .add('AnswerList', () => <AnswerList items={AnswerData} />)
-  .add('AnswerView', () => <AnswerView content={content} name="name" like={10} />)
+  .add('AnswerView', () => <AnswerView content={content} name="name" date="2020.08.08" like={10} />)
   .add('PostLike', () => {
     return <PostLike num={number('num', 10)} />;
   });
