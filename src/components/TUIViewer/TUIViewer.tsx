@@ -25,7 +25,7 @@ interface Props {
   content: string;
 }
 
-const TUIViewer = ({ content }: Props) => (
+const TUIViewer = ({ content }: Props): JSX.Element => (
   <>
     <Helmet>
       <link rel="stylesheet" href="https://uicdn.toast.com/editor/latest/toastui-editor-viewer.min.css" />

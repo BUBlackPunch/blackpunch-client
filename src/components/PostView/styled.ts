@@ -1,11 +1,19 @@
 import styled from '../../lib/styled';
 
+export const PostViewWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 900px;
+`;
+
 export const PostHeaderWrapper = styled.header`
   &,
   & > span {
     display: inline-flex;
     align-items: baseline;
   }
+  width: 900px;
+  line-height: 1.5rem;
 
   flex-direction: column;
   color: ${({ theme }) => theme.PRIMARY_FONT};
@@ -38,21 +46,38 @@ export const PostHeaderWrapper = styled.header`
   }
 
   & > span:nth-child(3) {
-    display:flex;
+    display: flex;
     align-items: center;
     width: 100%;
     justify-content: space-between;
     font-size: 0.75rem;
-    
+
     div:last-child {
-      display:flex;
+      display: flex;
       align-items: center;
-      & > div {
+      margin-top: 3rem & > div {
         margin-right: 0.5rem;
       }
     }
     strong {
       margin-right: 0.5rem;
     }
+  }
+`;
+
+export const UpVoteWrapper = styled.span`
+  &,
+  div {
+    display: inline-flex;
+    align-items: center;
+  }
+  margin-top: 2rem;
+  font-size: 0.8rem;
+  font-weight: bold;
+  align-self: center;
+  color: ${({ theme }) => theme.PRIMARY_FONT};
+  svg {
+    margin-left: 0.3rem;
+    margin-right: 0.3rem;
   }
 `;

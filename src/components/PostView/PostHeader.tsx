@@ -24,7 +24,7 @@ const PostHeader: React.FC<Props> = ({ post }: Props) => {
             </Badge>
           ))}
         </div>
-        <div>{<Avatar name={post.user.name} />}{post.user.name}</div>
+        <div>{<Avatar name={post.user.name}/>}{post.user.name}</div>
       </span>
     </PostHeaderWrapper>
   );

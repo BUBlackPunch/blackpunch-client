@@ -1,4 +1,4 @@
-export { default } from './PostPage';
+export { default } from './PostView';
 
 export type TagColor =
   | 'automatic'
@@ -12,7 +12,6 @@ export type TagColor =
   | 'purple'
   | undefined;
 
-
 export interface Post {
   id: number;
   title: string;
@@ -22,5 +21,6 @@ export interface Post {
   user: { name: string; profile: string | null };
   hasImage?: boolean;
   createdAt: string;
+  content: string;
   // date: string;
 }
