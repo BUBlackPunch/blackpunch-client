@@ -1,7 +1,8 @@
 import React from 'react';
 import { CommentListWrapper, CommentButtonWrapper } from './styled';
 import { CommentProps } from './index';
-import { Avatar } from 'evergreen-ui';
+import UserAvatar from '../UserAvatar';
+
 import Button from '../Button';
 
 interface Props {
@@ -11,7 +12,7 @@ interface Props {
 const CommentRow = ({ user, content, date }: CommentProps) => (
   <div>
     <div>
-      <Avatar />
+      <UserAvatar />
     </div>
     <div>
       <span>
@@ -26,7 +27,7 @@ const CommentRow = ({ user, content, date }: CommentProps) => (
 const WriteButton = () => {
   return (
     <>
-      <Avatar size={30} />
+      <UserAvatar size={30} />
       <input />
       <Button type="BUTTON_TYPE_PRIMARY" text="댓글 작성" />
     </>
@@ -37,8 +38,9 @@ const CommentView: React.FC<Props> = ({ items }: Props) => {
   return (
     <>
       <CommentListWrapper>
-        {
-          items?.map((item) => <CommentRow key={item.id} user={item.user} date={item.date} content={item.content} />)}
+        {items?.map((item) => (
+          <CommentRow key={item.id} user={item.user} date={item.date} content={item.content} />
+        ))}
       </CommentListWrapper>
 
       <CommentButtonWrapper>

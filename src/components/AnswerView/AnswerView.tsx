@@ -1,5 +1,6 @@
 import React from 'react';
-import { Avatar, HeartIcon } from 'evergreen-ui';
+import { HeartIcon } from 'evergreen-ui';
+import UserAvatar from '../UserAvatar';
 import { AnswerViewWrapper, AnswerListWrapper } from './styled';
 import CommentView from './CommentView';
 import { AnswerProps } from './index';
@@ -13,7 +14,7 @@ export const AnswerView: React.FC<AnswerProps> = ({ name, date, like, content, c
   return (
     <AnswerViewWrapper>
       <span>
-        <Avatar size={35} />
+        <UserAvatar size={35} />
         <div>
           <span>{name}</span>
           <span>{date}</span>

@@ -1,6 +1,6 @@
 /** @jsx jsx */
 // import React from 'react';
-import { Avatar } from 'evergreen-ui';
+import UserAvatar from '../../UserAvatar';
 import ModalFrame, { MODAL_TYPE_PROFILE } from '../ModalFrame';
 import { jsx, css } from '@emotion/core';
 import { PostListWrapper, ProfileWrapper } from './styled';
@@ -57,7 +57,7 @@ const ProfileContent = ({ nick, id, introduce, WrittenPosts, WrittenComments }: 
   return (
     <ProfileWrapper>
       <div>
-        <Avatar size={100} name={nick} color="yellow" marginBottom="1rem" />
+        <UserAvatar size={100} />
         <div>
           {/* 닉네임 / 아이디*/}
           <span>

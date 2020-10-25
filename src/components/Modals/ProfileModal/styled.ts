@@ -69,6 +69,7 @@ export const ProfileWrapper = styled.div`
   & > div:first-child{
     flex-direction: row;
     justify-content: flex-start;
+    
 
     & > div:nth-child(2) {
       margin-left: 2rem;

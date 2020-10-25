@@ -58,6 +58,9 @@ export const PostHeaderWrapper = styled.header`
       margin-top: 3rem & > div {
         margin-right: 0.5rem;
       }
+      div {
+        margin-right: 0.5rem;
+      }
     }
     strong {
       margin-right: 0.5rem;

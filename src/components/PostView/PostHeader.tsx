@@ -1,7 +1,8 @@
 import React from 'react';
 import { PostHeaderWrapper } from './styled';
-import { Avatar, Badge } from 'evergreen-ui';
+import { Badge } from 'evergreen-ui';
 import { Post } from './index';
+import UserAvatar from '../UserAvatar';
 
 interface Props {
   post: Post;
@@ -24,8 +25,8 @@ const PostHeader: React.FC<Props> = ({ post }: Props) => {
           ))}
         </div>
         <div>
-          {<Avatar name={post.user.name} />}
-          {post.user.name}
+          {/* Avatar -> UserAvatar 수정, 수정 필요  */}
+          <UserAvatar size={25} /> {post.user.name}
         </div>
       </span>
     </PostHeaderWrapper>

@@ -5,7 +5,8 @@ import PostView from './PostView';
 import { number } from '@storybook/addon-knobs';
 import { Post } from './index';
 import PostLike from './PostLike';
-import AnswerList, { AnswerView, ItemProps } from '../AnswerView/AnswerView';
+import AnswerView, { AnswerProps, CommentProps } from '../AnswerView';
+import CommentView from '../AnswerView/CommentView';
 import TUIViewer from '../TUIViewer';
 
 const content = `
@@ -34,7 +35,28 @@ const post: Post = {
   content: content,
 };
 
-const AnswerData: ItemProps[] = [
+const comments: CommentProps[] = [
+  {
+    id: 1,
+    user: 'user1',
+    date: '2020.08.01.',
+    content: '반갑습니다.',
+  },
+  {
+    id: 2,
+    user: 'user2',
+    date: '2020.08.01.',
+    content: '반갑습니다.',
+  },
+  {
+    id: 3,
+    user: 'user3',
+    date: '2020.08.01.',
+    content: '반갑습니다.',
+  },
+];
+
+const AnswerData: AnswerProps[] = [
   {
     id: 1,
     name: 'name',
@@ -48,6 +70,7 @@ const AnswerData: ItemProps[] = [
     like: 10,
     date: '2020.08.08',
     content: content,
+    comments: comments,
   },
   {
     id: 4,
@@ -55,6 +78,7 @@ const AnswerData: ItemProps[] = [
     like: 10,
     date: '2020.08.08',
     content: content,
+    comments: comments,
   },
   {
     id: 5,
@@ -71,12 +95,14 @@ const AnswerData: ItemProps[] = [
     content: content,
   },
 ];
+
 storiesOf('Post & Answer', module)
   .add('PostView', () => <PostView post={post} />)
   .add('PostHeader', () => <PostHeader post={post} />)
   .add('TUIView', () => <TUIViewer content={content} />)
-  .add('AnswerList', () => <AnswerList items={AnswerData} />)
-  .add('AnswerView', () => <AnswerView content={content} name="name" date="2020.08.08" like={10} />)
   .add('PostLike', () => {
     return <PostLike num={number('num', 10)} />;
-  });
+  })
+  .add('Answer', () => <AnswerView items={AnswerData} />)
+  // .add('AnswerView', () => <AnswerView content={content} name="name" date="2020.08.08" like={10} />)
+  .add('CommentView', () => <CommentView items={comments} />);

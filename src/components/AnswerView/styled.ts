@@ -64,13 +64,16 @@ export const CommentListWrapper = styled.div`
     justify-content: flex-start;
 
     & > div {
+      & > div {
+        margin-right: 0.5rem;
+      }
       & > span {
         display: flex;
         flex-wrap: nowrap;
         font-size: 0.75rem;
         & > div:first-child {
           font-weight: bold;
-          margin-right: 1rem;
+          margin-right: 0.5rem;
         }
       }
       & > span:last-child {
