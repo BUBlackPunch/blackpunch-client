@@ -30,27 +30,8 @@ export const AnswerViewWrapper = styled.div`
     & > div:last-child {
       justify-self: flex-end;
       margin-left: auto;
-      /* flex-direction: column; */
       align-items: center;
     }
-  }
-
-  & > div {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    min-height: 70px;
-  }
-
-  & > span:last-child {
-    width: 100%;
-    input {
-      height: 1.5rem;
-      flex-grow: 2;
-      width: max-content;
-      margin-left: 0.5rem;
-      margin-right: 0.5rem;
-    }
-    margin-left: 0;
   }
 `;
 
@@ -69,4 +50,47 @@ export const AnswerListWrapper = styled.div`
   & > div:not(:last-child) {
     margin-bottom: 2rem;
   }
+`;
+
+export const CommentListWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  color: ${({ theme }) => theme.PRIMARY_FONT};
+  margin-top: 1rem;
+  width: 100%;
+  /* each Row */
+  & > div {
+    display: flex;
+    justify-content: flex-start;
+
+    & > div {
+      & > span {
+        display: flex;
+        flex-wrap: nowrap;
+        font-size: 0.75rem;
+        & > div:first-child {
+          font-weight: bold;
+          margin-right: 1rem;
+        }
+      }
+      & > span:last-child {
+        font-size: 0.65rem;
+      }
+    }
+    margin-bottom: 0.75rem;
+  }
+`;
+
+export const CommentButtonWrapper = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  input {
+    height: 1.5rem;
+    flex-grow: 2;
+    width: max-content;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+  margin-left: 0;
 `;

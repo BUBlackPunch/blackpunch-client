@@ -1,24 +1,15 @@
 import React from 'react';
 import { Avatar, HeartIcon } from 'evergreen-ui';
 import { AnswerViewWrapper, AnswerListWrapper } from './styled';
-import Button from '../Button';
+import CommentView from './CommentView';
+import { AnswerProps } from './index';
 import TUIViewer from '../TUIViewer';
 
 interface ListProps {
-  items: ItemProps[];
+  items: AnswerProps[];
 }
 
-export interface ItemProps {
-  id?: number;
-  // writer: string;
-  name: string;
-  date: string;
-  like: number;
-  content: string;
-  // content: string;
-}
-
-export const AnswerView: React.FC<ItemProps> = ({ name, date, like, content }: ItemProps) => {
+export const AnswerView: React.FC<AnswerProps> = ({ name, date, like, content, comments }: AnswerProps) => {
   return (
     <AnswerViewWrapper>
       <span>
@@ -34,11 +25,8 @@ export const AnswerView: React.FC<ItemProps> = ({ name, date, like, content }: I
       </span>
       {/* Content */}
       <TUIViewer content={content} />
-      <span>
-        <Avatar size={30} />
-        <input />
-        <Button type="BUTTON_TYPE_PRIMARY" text="댓글 작성" />
-      </span>
+      {/* {comments ? <CommentView items={comments} /> : <CommentView />} */}
+      <CommentView items={comments} />
     </AnswerViewWrapper>
   );
 };
@@ -54,6 +42,7 @@ const AnswerList = ({ items }: ListProps): JSX.Element => {
           name={item.name}
           like={item.like}
           content={item.content}
+          comments={item.comments}
         />
       ))}
     </AnswerListWrapper>
