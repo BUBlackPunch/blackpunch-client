@@ -1,5 +1,6 @@
 import React from 'react';
-import { Avatar, Badge } from 'evergreen-ui';
+import { Badge } from 'evergreen-ui';
+import UserAvatar from '../UserAvatar';
 
 import image from './media.svg';
 
@@ -51,7 +52,8 @@ const PostCard = ({ post }: Props) => (
     </TagsWrapper>
     <LikeWrapper>{post.like}</LikeWrapper>
     <WriterOrCreatedWrapper>
-      <Avatar name={post.user.name} color="blue" />
+      {/* Avatar -> UserAvatar 수정, 수정 필요  */}
+      <UserAvatar />
       <span>{post.user.name}</span>
     </WriterOrCreatedWrapper>
     <WriterOrCreatedWrapper>{post.createdAt}</WriterOrCreatedWrapper>

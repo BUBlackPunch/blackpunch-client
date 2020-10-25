@@ -1,5 +1,6 @@
 import React from 'react';
-import { Avatar, Menu, Popover, Button } from 'evergreen-ui';
+import { Menu, Popover, Button } from 'evergreen-ui';
+import UserAvatar from '../UserAvatar';
 // import styled from '../../lib/styled';
 
 function PopMenu() {
@@ -19,7 +20,7 @@ function Profile(): JSX.Element {
   return (
     <Popover content={<PopMenu />}>
       <Button appearance="minimal" width="1rem" justifyContent="center" marginRight="1rem">
-        <Avatar name="Fake Name" size={20} float="right" />
+        <UserAvatar size={20} />
       </Button>
     </Popover>
   );
