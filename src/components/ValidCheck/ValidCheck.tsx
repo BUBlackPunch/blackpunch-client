@@ -2,7 +2,7 @@
 import React from 'react';
 import { ValidCheckType, VALID_CHECK_DEFAULT } from './index';
 import { jsx, css } from '@emotion/core';
-import theme from '../../theme';
+import theme from '@/theme';
 
 interface Props {
   children: React.ReactNode;

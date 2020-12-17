@@ -1,7 +1,7 @@
 import React from 'react';
 import { Menu, Popover, Button } from 'evergreen-ui';
-import UserAvatar from '../UserAvatar';
-// import styled from '../../lib/styled';
+import UserAvatar from '@components/UserAvatar';
+// import styled from '@styled';
 
 function PopMenu() {
   return (

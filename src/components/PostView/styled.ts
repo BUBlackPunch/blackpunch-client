@@ -1,4 +1,4 @@
-import styled from '../../lib/styled';
+import styled from '@styled';
 
 export const PostViewWrapper = styled.div`
   display: flex;

@@ -1,8 +1,8 @@
 import React from 'react';
 import ModalFrame from '../ModalFrame';
-import { Input } from '../../Input';
+import { Input } from '@components/Input';
 import { ContentWrapper } from './styled';
-import Button from '../../Button';
+import Button from '@components/Button';
 
 interface Props {
   visible: boolean;

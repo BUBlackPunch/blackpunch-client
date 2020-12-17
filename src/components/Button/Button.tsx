@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from '../../lib/styled';
+import styled from '@styled';
 
 import { ButtonType, BUTTON_TYPE_DEFAULT } from './index';
 

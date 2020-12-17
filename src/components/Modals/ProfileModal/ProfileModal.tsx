@@ -1,6 +1,6 @@
 /** @jsx jsx */
 // import React from 'react';
-import UserAvatar from '../../UserAvatar';
+import UserAvatar from '@components/UserAvatar';
 import ModalFrame, { MODAL_TYPE_PROFILE } from '../ModalFrame';
 import { jsx, css } from '@emotion/core';
 import { PostListWrapper, ProfileWrapper } from './styled';

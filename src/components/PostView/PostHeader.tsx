@@ -2,7 +2,7 @@ import React from 'react';
 import { PostHeaderWrapper } from './styled';
 import { Badge } from 'evergreen-ui';
 import { Post } from './index';
-import UserAvatar from '../UserAvatar';
+import UserAvatar from '@components/UserAvatar';
 
 interface Props {
   post: Post;

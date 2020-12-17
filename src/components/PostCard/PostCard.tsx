@@ -1,6 +1,6 @@
 import React from 'react';
 import { Badge } from 'evergreen-ui';
-import UserAvatar from '../UserAvatar';
+import UserAvatar from '@components/UserAvatar';
 
 import image from './media.svg';
 

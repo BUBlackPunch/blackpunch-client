@@ -1,3 +1,4 @@
+const custom = require('../config-overrides');
 module.exports = {
   stories: ['../src/**/*.stories.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
   addons: [
@@ -7,4 +8,11 @@ module.exports = {
     '@storybook/addon-actions',
     '@storybook/addon-knobs',
   ],
+  webpackFinal: (storybookConfig) => {
+    const customConfig = custom(storybookConfig);
+    return {
+      ...storybookConfig,
+      module: { ...storybookConfig.module, rules: customConfig.module.rules },
+    };
+  },
 };

@@ -1,5 +1,5 @@
 import styled, { CreateStyled } from '@emotion/styled';
-import theme from '../theme/index';
+import theme from '@/theme/index';
 
 type Theme = typeof theme;
 

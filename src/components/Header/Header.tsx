@@ -5,7 +5,7 @@ import Search from './Search';
 import Profile from './Profile';
 import Notification from './Notification';
 import { SigninButton } from './SigninButton';
-import styled from '../../lib/styled';
+import styled from '@styled';
 
 /* /
   ### 예정 사항

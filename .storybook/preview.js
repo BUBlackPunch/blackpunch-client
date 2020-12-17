@@ -3,7 +3,7 @@ import { ThemeProvider } from 'emotion-theming';
 import { Global, css } from '@emotion/core';
 import reset from 'emotion-reset';
 
-import theme from '../src/theme';
+import theme from '@/theme';
 
 const GlobalStyle = () => (
   <Global

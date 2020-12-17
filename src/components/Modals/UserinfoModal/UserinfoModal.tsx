@@ -1,9 +1,9 @@
 import React, { ReactElement, useState } from 'react';
 import ModalFrame from '../ModalFrame';
 import { ContentWrapper } from './styled';
-import Button from '../../Button';
-import ValidCheck from '../../ValidCheck';
-import { Input, Textarea } from '../../Input';
+import Button from '@components/Button';
+import ValidCheck from '@components/ValidCheck';
+import { Input, Textarea } from '@components/Input';
 
 interface Props {
   visible: boolean;

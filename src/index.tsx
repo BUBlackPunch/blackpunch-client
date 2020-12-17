@@ -4,7 +4,7 @@ import { ThemeProvider } from 'emotion-theming';
 
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import theme from '../src/theme';
+import theme from '@/theme';
 import GlobalStyle from './theme/global';
 
 ReactDOM.render(
