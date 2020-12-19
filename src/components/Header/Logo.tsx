@@ -1,6 +1,6 @@
 import React from 'react';
 import { Icon, DeltaIcon, Heading } from 'evergreen-ui';
-import styled from '../../lib/styled';
+import styled from '@styled';
 
 const LogoWrapper = styled.div`
   display: flex;

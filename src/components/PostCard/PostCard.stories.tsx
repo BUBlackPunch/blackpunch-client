@@ -2,7 +2,7 @@ import React from 'react';
 import { text } from '@storybook/addon-knobs';
 
 import PostCard from './index';
-import ListHeader from '../ListHeader';
+import ListHeader from '@components/ListHeader';
 import { Post } from './PostCard';
 
 export default {

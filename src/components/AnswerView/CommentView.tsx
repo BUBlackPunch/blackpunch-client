@@ -1,9 +1,9 @@
 import React from 'react';
 import { CommentListWrapper, CommentButtonWrapper } from './styled';
 import { CommentProps } from './index';
-import UserAvatar from '../UserAvatar';
+import UserAvatar from '@components/UserAvatar';
 
-import Button from '../Button';
+import Button from '@components/Button';
 
 interface Props {
   items?: CommentProps[];

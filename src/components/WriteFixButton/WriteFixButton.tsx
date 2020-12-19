@@ -2,7 +2,7 @@ import React from 'react';
 import { EditIcon } from 'evergreen-ui';
 
 import WriteFixButtonWrapper from './styled';
-import theme from '../../theme';
+import theme from '@/theme';
 
 interface Props {
   onClick: () => void;

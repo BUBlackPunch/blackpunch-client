@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import WriteReplyForm from './index';
-import WriteFixButton from '../WriteFixButton';
+import WriteFixButton from '@components/WriteFixButton';
 
 export default { title: 'WriteReplyForm', component: WriteReplyForm };
 

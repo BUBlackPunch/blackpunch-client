@@ -3,7 +3,7 @@ import PostHeader from './PostHeader';
 import UpVote from './PostLike';
 import { PostViewWrapper } from './styled';
 import { Post } from './index';
-import TUIViewer from '../TUIViewer';
+import TUIViewer from '@components/TUIViewer';
 
 interface Props {
   post: Post;

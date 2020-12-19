@@ -1,10 +1,10 @@
 import React from 'react';
 import { HeartIcon } from 'evergreen-ui';
-import UserAvatar from '../UserAvatar';
+import UserAvatar from '@components/UserAvatar';
 import { AnswerViewWrapper, AnswerListWrapper } from './styled';
 import CommentView from './CommentView';
 import { AnswerProps } from './index';
-import TUIViewer from '../TUIViewer';
+import TUIViewer from '@components/TUIViewer';
 
 interface ListProps {
   items: AnswerProps[];

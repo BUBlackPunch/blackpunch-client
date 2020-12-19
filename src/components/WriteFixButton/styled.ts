@@ -1,4 +1,4 @@
-import styled from '../../lib/styled';
+import styled from '@styled';
 
 const WriteFixButtonWrapper = styled.button`
   position: fixed;

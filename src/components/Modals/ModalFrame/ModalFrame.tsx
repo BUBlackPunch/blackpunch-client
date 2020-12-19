@@ -1,7 +1,7 @@
 import React from 'react';
-import styled from '../../../lib/styled';
+import styled from '@styled';
 import { ModalType, MODAL_TYPE_DEAFULT } from './index';
-import Portal from '../../../lib/Portal';
+import Portal from '@/lib/Portal';
 
 /* 
   property:

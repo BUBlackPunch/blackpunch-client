@@ -5,9 +5,9 @@ import PostView from './PostView';
 import { number } from '@storybook/addon-knobs';
 import { Post } from './index';
 import PostLike from './PostLike';
-import AnswerView, { AnswerProps, CommentProps } from '../AnswerView';
-import CommentView from '../AnswerView/CommentView';
-import TUIViewer from '../TUIViewer';
+import AnswerView, { AnswerProps, CommentProps } from '@components/AnswerView';
+import CommentView from '@components/AnswerView/CommentView';
+import TUIViewer from '@components/TUIViewer';
 
 const content = `
 <h2>hi</h2>

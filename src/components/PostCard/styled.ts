@@ -1,4 +1,4 @@
-import styled from '../../lib/styled';
+import styled from '@styled';
 
 const PostCardWrapper = styled.div<{ borderColor: string }>`
   width: 876px;

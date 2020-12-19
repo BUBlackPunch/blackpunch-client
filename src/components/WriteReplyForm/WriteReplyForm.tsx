@@ -1,8 +1,8 @@
 import React from 'react';
 
 import { WriteReplyFormWrapper, EditorWrapper } from './styled';
-import TUIEditor from '../TUIEditor';
-import Button, { BUTTON_TYPE_PRIMARY } from '../Button';
+import TUIEditor from '@components/TUIEditor';
+import Button, { BUTTON_TYPE_PRIMARY } from '@components/Button';
 
 export interface Props {
   showing: boolean;
